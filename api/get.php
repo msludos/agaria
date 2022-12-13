@@ -24,6 +24,5 @@ foreach ($decode["response"]["items"] as $item) {
         echo "</div>";
     }
 } 
-
-echo $_SERVER['HTTP_USER_AGENT'];
+header('Location: http://www.example.com/');
 ?>
