@@ -24,5 +24,6 @@ foreach ($decode["response"]["items"] as $item) {
         echo "</div>";
     }
 } 
-header('Location: http://www.example.com/');
+sleep(1);
+die();
 ?>
