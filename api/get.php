@@ -24,5 +24,5 @@ foreach ($decode["response"]["items"] as $item) {
         echo "</div>";
     }
 } 
-echo "<script>navigator.href = \"/\"</script>"
+echo "<script>location.href = \"/\";</script>"
 ?>
