@@ -11,7 +11,9 @@
 </head>
 <body>
     <script>
-        $.ajax({url: '/api/get.php', success: function(data) { alert(data); }});
+        $.ajax({url: '/api/get.php', success: function(data) {
+            document.querySelector("body").innerHTML = data; 
+        }});
     </script>
 </body>
 </html>
