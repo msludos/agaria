@@ -32,3 +32,8 @@ body {
     width: 84px;
     height: 84px;
 }
+
+.menu .lang a {
+    color: white;
+    text-decoration: none;
+}
