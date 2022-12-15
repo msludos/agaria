@@ -27,8 +27,8 @@ let menu = `
     <div class="item"><a href="/${localStorage.getItem("lang")}/article">${getMenuItem("article")}</a></div>
     <div class="item"><a href="/${localStorage.getItem("lang")}/about">${getMenuItem("about")}</a></div>
     <div class="lang">
-        <a href="/ru/${location.pathname+location.search+location.hash}">RU</a>
-        <a href="/ag/${location.pathname+location.search+location.hash}">AG</a>
+        <a href="/ru/${location.pathname.slice(0, 4)+location.search+location.hash}">RU</a>
+        <a href="/ag/${location.pathname.slice(0, 4)+location.search+location.hash}">AG</a>
     </div>
 </div>
 `;
