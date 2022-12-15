@@ -21,4 +21,6 @@ body {
     height: 64px;
     border-radius: 20px;
     margin-right: 50px;
+    padding: 20px;
+    background-color: white;
 }
