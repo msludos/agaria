@@ -3,6 +3,7 @@
     justify-content: center;
     height: 64px;
     padding: 20px;
+    background-color: firebrick;
 }
 
 .menu .item a {
