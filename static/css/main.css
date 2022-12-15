@@ -1,9 +1,9 @@
 .menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 64px;
     padding: 20px;
-    background-color: firebrick;
+    background-color: #b42222;
 }
 
 .menu .item a {
@@ -14,4 +14,6 @@
 .menu .icon img {
     width: 64px;
     height: 64px;
+    border-radius: 20px;
+    padding-right: 50px;
 }
