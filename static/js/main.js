@@ -1,20 +1,20 @@
 function getMenuItem(name) {
     switch (name) {
         case "main":
-            if (localStorage.getItem("lang") == "ru") return "Главная";
-            if (localStorage.getItem("lang") == "ag") return "Glavna";
+            if (document.querySelector("html").getAttribute("lang") == "ru") return "Главная";
+            if (document.querySelector("html").getAttribute("lang") == "ag") return "Glavna";
             break;
         case "news":
-            if (localStorage.getItem("lang") == "ru") return "Новости";
-            if (localStorage.getItem("lang") == "ag") return "Kunen Novostak";
+            if (document.querySelector("html").getAttribute("lang") == "ru") return "Новости";
+            if (document.querySelector("html").getAttribute("lang") == "ag") return "Kunen Novostak";
             break;
         case "article":
-            if (localStorage.getItem("lang") == "ru") return "Статьи";
-            if (localStorage.getItem("lang") == "ag") return "Kunen Stat`ak";
+            if (document.querySelector("html").getAttribute("lang") == "ru") return "Статьи";
+            if (document.querySelector("html").getAttribute("lang") == "ag") return "Kunen Stat`ak";
             break;
         case "about":
-            if (localStorage.getItem("lang") == "ru") return "О Нас";
-            if (localStorage.getItem("lang") == "ag") return "O Mukâî";
+            if (document.querySelector("html").getAttribute("lang") == "ru") return "О Нас";
+            if (document.querySelector("html").getAttribute("lang") == "ag") return "O Mukâî";
             break;
     }
 }
@@ -22,10 +22,10 @@ function getMenuItem(name) {
 let menu = `
 <div class="menu">
     <div class="icon"><img src="/static/imgs/logo.png" alt="logo"></div>
-    <div class="item"><a href="/${localStorage.getItem("lang")}">${getMenuItem("main")}</a></div>
-    <div class="item"><a href="/${localStorage.getItem("lang")}/news">${getMenuItem("news")}</a></div>
-    <div class="item"><a href="/${localStorage.getItem("lang")}/article">${getMenuItem("article")}</a></div>
-    <div class="item"><a href="/${localStorage.getItem("lang")}/about">${getMenuItem("about")}</a></div>
+    <div class="item"><a href="/${document.querySelector("html").getAttribute("lang")}">${getMenuItem("main")}</a></div>
+    <div class="item"><a href="/${document.querySelector("html").getAttribute("lang")}/news">${getMenuItem("news")}</a></div>
+    <div class="item"><a href="/${document.querySelector("html").getAttribute("lang")}/article">${getMenuItem("article")}</a></div>
+    <div class="item"><a href="/${document.querySelector("html").getAttribute("lang")}/about">${getMenuItem("about")}</a></div>
     <div class="lang">
         <a href="/ru/${location.pathname.slice(4)+location.search+location.hash}">RU</a>
         <a href="/ag/${location.pathname.slice(4)+location.search+location.hash}">AG</a>
@@ -34,7 +34,6 @@ let menu = `
 `;
 
 window.onload = function() { 
-    localStorage.setItem("lang", document.querySelector("html").getAttribute("lang"));
     document.querySelector("body").innerHTML = menu + document.querySelector("body").innerHTML;
     document.querySelector(".lang a[href^='/ru/']").addEventListener("click", function() {
         localStorage.setItem("lang", "ru");
