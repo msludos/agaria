@@ -24,3 +24,8 @@ body {
     padding: 20px;
     background-color: white;
 }
+
+.menu .icon {
+    width: 64px;
+    height: 64px;
+}
