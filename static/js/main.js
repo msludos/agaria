@@ -36,10 +36,10 @@ let menu = `
 window.onload = function() { 
     localStorage.setItem("lang", "ru");
     document.querySelector("body").innerHTML = menu + document.querySelector("body").innerHTML;
-    document.querySelector(".lang a[href^='/ru/']").addEventListener(function() {
+    document.querySelector(".lang a[href^='/ru/']").addEventListener("click", function() {
         localStorage.setItem("lang", "ru");
     });
-    document.querySelector(".lang a[href^='/ag/']").addEventListener(function() {
+    document.querySelector(".lang a[href^='/ag/']").addEventListener("click", function() {
         localStorage.setItem("lang", "ag");
     });
 }
