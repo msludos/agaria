@@ -6,7 +6,7 @@ body {
 .menu {
     display: flex;
     justify-content: space-evenly;
-    height: 64px;
+    height: 84px;
     padding: 20px;
     background-color: firebrick;
 }
